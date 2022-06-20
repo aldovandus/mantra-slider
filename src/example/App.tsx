@@ -1,4 +1,4 @@
-import { MantraImage, MantraSlider } from '../components/mantra-slider';
+import { MantraImage, MantraSlider } from '../index';
 import './App.css';
 
 const data = [
@@ -37,7 +37,7 @@ function App() {
         <p>A simple and lightweight slider for viewing pictures ⚡️</p>
       </div>
       <MantraSlider
-        keyExtractor={'src'}
+        keyExtractor={(item) => item.src}
         initialImageIndex={1}
         isZoomEnabled={true}
         data={data}

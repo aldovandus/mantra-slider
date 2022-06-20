@@ -1,5 +1,5 @@
 interface StoreState {
-  keyExtractor: string;
+  keyExtractor: (item: any) => string;
   currentImageIndex: number;
   fullscreen: boolean;
   fullscreenZoomed: boolean;

@@ -1,8 +1,8 @@
-import create from "zustand";
-import { StoreState } from "./typings";
+import create from 'zustand';
+import { StoreState } from './typings';
 
 const useStore = create<StoreState>((set) => ({
-  keyExtractor: "src",
+  keyExtractor: (item) => item.id,
   data: [],
   currentImageIndex: 0,
   fullscreen: false,

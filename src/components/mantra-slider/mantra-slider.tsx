@@ -9,11 +9,11 @@ const SCALE_RATE = 0.25;
 const ZOOM_SCALE = 1.5;
 
 const MainImage = ({ children }: { children: React.ReactNode }) => {
-  const data = useStore((state) => state.data[state.currentImageIndex]);
+  const data = useStore(
+    (state) => state.data.map(state.keyExtractor)[state.currentImageIndex]
+  );
   const setFullScreen = useStore((state) => state.setFullScreen);
   const mainImageRef = useRef<HTMLImageElement>(null);
-
-  const keyExtractor = useStore.getState().keyExtractor;
 
   const onMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
@@ -46,9 +46,7 @@ const MainImage = ({ children }: { children: React.ReactNode }) => {
       onMouseLeave={onMouseLeave}
       className='main-image'
       onClick={onClick}>
-      {data && data[keyExtractor] && (
-        <img ref={mainImageRef} src={data[keyExtractor]} />
-      )}
+      {data && <img ref={mainImageRef} src={data} />}
       <div
         style={{
           position: 'absolute',
@@ -67,7 +65,7 @@ interface Props {
   data: any;
   isZoomEnabled?: boolean;
   renderItem?(item: any, index: number): React.ReactNode;
-  keyExtractor: string;
+  keyExtractor: (item: any) => string;
 }
 
 const MantraSlider = ({

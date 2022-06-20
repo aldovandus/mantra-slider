@@ -1,3 +1,4 @@
-import { MantraSlider } from './components/mantra-slider';
+import { MantraImage, MantraSlider } from './components/mantra-slider';
 
+export { MantraSlider, MantraImage };
 export default MantraSlider;
