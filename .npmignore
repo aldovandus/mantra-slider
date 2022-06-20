@@ -1,0 +1,8 @@
+public
+vite.config.ts
+index.html
+src/example
+src/favicon.svg
+main.tsx
+vite-env-d.ts
+*.jpg
