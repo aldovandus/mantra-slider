@@ -5,7 +5,7 @@ interface Props {
     data: any;
     isZoomEnabled?: boolean;
     renderItem?(item: any, index: number): React.ReactNode;
-    keyExtractor: string;
+    keyExtractor: (item: any) => string;
 }
 declare const MantraSlider: ({ children, initialImageIndex, renderItem, isZoomEnabled, keyExtractor, data, }: Props) => JSX.Element | null;
 export { MantraSlider };

@@ -1,4 +1,5 @@
 import { MantraImage, MantraSlider } from '../index';
+import '../../dist/style.css';
 import './App.css';
 
 const data = [
