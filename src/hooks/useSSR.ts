@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const useSSR = () => {
   const [isSSR, setIsSSR] = useState(false);
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       setIsSSR(true);
     }
   }, []);
