@@ -10,16 +10,18 @@ const GalleryLayout = ({ children }: { children: React.ReactNode }) => {
   );
 
   useLayoutEffect(() => {
-    setTimeout(() => {
-      const isScrollable = ref.current
-        ? ref.current?.scrollHeight > ref.current?.clientHeight
-        : false;
+    if (useStore.getState().isControllersEnabled) {
+      setTimeout(() => {
+        const isScrollable = ref.current
+          ? ref.current?.scrollHeight > ref.current?.clientHeight
+          : false;
 
-      if (isScrollable) {
-        setScrollbarTopIcon(true);
-        setScrollbarBottomIcon(true);
-      }
-    }, 800);
+        if (isScrollable) {
+          setScrollbarTopIcon(true);
+          setScrollbarBottomIcon(true);
+        }
+      }, 800);
+    }
   }, []);
 
   const onScroll = (ev: any) => {

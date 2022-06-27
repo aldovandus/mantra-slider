@@ -3,6 +3,7 @@ interface StoreState {
   currentImageIndex: number;
   fullscreen: boolean;
   fullscreenZoomed: boolean;
+  isControllersEnabled: boolean;
   showScrollbarBottomIcon: boolean;
   showScrollbarTopIcon: boolean;
   isOnMouseEnterEnabled: boolean;

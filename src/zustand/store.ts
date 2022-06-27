@@ -7,6 +7,7 @@ const useStore = create<StoreState>((set) => ({
   currentImageIndex: 0,
   fullscreen: false,
   fullscreenZoomed: false,
+  isControllersEnabled: true,
   showScrollbarBottomIcon: false,
   showScrollbarTopIcon: false,
   isOnMouseEnterEnabled: true,

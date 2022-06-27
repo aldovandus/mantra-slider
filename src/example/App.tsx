@@ -41,6 +41,7 @@ function App() {
         initialImageIndex={1}
         isZoomEnabled={true}
         data={data}
+        isControllersEnabled={false}
         renderItem={(item, index) => (
           <MantraImage index={index} key={index}>
             <img src={item.src} />
