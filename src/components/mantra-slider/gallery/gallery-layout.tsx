@@ -1,6 +1,6 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
-import { useStore } from "../../../zustand/store";
-import { GalleryControllers } from "./controllers";
+import React, { useLayoutEffect, useRef } from 'react';
+import { useStore } from '../../../zustand/store';
+import { GalleryControllers } from './controllers';
 
 const GalleryLayout = ({ children }: { children: React.ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -19,7 +19,7 @@ const GalleryLayout = ({ children }: { children: React.ReactNode }) => {
         setScrollbarTopIcon(true);
         setScrollbarBottomIcon(true);
       }
-    }, 400);
+    }, 800);
   }, []);
 
   const onScroll = (ev: any) => {
@@ -39,18 +39,18 @@ const GalleryLayout = ({ children }: { children: React.ReactNode }) => {
   };
 
   const onTopClick = () =>
-    ref.current?.scrollTo({ top: 0, behavior: "smooth" });
+    ref.current?.scrollTo({ top: 0, behavior: 'smooth' });
   const onBottomClick = () =>
     ref.current?.scrollTo({
       top: 1000,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
 
   return (
-    <div ref={ref} onScroll={onScroll} className="gallery">
-      <GalleryControllers onClick={onTopClick} position="top" />
+    <div ref={ref} onScroll={onScroll} className='gallery'>
+      <GalleryControllers onClick={onTopClick} position='top' />
       {children}
-      <GalleryControllers onClick={onBottomClick} position="bottom" />
+      <GalleryControllers onClick={onBottomClick} position='bottom' />
     </div>
   );
 };
