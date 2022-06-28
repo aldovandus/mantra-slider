@@ -5,6 +5,7 @@ A simple and lightweight slider for viewing pictures
 ![Screenshot from 2022-06-28 22-02-49](https://user-images.githubusercontent.com/12563425/176276110-da96fa76-f88c-4566-b056-e730649bba95.png)
 
 ## Installation
+
 ​
 Install with npm
 ​
@@ -18,3 +19,11 @@ Install with yarn
   yarn add mantra-slider
 ```
 ​
+## Run with vite.js
+
+```
+  git clone https://github.com/aldovandus/react-pictures-viewer
+  cd react-pictures-viewer
+  yarn install
+  yarn dev
+```
