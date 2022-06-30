@@ -4,9 +4,9 @@ interface Props {
     initialImageIndex?: number;
     data: any;
     isZoomEnabled?: boolean;
-    isControllersEnabled?: boolean;
+    hasControllers?: boolean;
     renderItem?(item: any, index: number): React.ReactNode;
     keyExtractor: (item: any) => string;
 }
-declare const MantraSlider: ({ children, initialImageIndex, renderItem, isZoomEnabled, keyExtractor, data, isControllersEnabled, }: Props) => JSX.Element | null;
+declare const MantraSlider: ({ children, initialImageIndex, renderItem, isZoomEnabled, keyExtractor, data, hasControllers, }: Props) => JSX.Element | null;
 export { MantraSlider };

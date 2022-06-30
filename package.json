@@ -1,6 +1,6 @@
 {
   "name": "mantra-slider",
-  "version": "0.8.7",
+  "version": "0.8.8",
   "description": "A react component for viewing pictures",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
