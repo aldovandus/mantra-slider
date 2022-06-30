@@ -10,6 +10,7 @@ const useStore = create<StoreState>((set) => ({
   isControllersEnabled: true,
   showScrollbarBottomIcon: false,
   showScrollbarTopIcon: false,
+  hasControllers: true,
   isOnMouseEnterEnabled: true,
   isZoomEnabled: true,
   mainImageHeight: null,

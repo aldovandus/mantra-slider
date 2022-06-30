@@ -6,6 +6,7 @@ interface StoreState {
   isControllersEnabled: boolean;
   showScrollbarBottomIcon: boolean;
   showScrollbarTopIcon: boolean;
+  hasControllers: boolean;
   isOnMouseEnterEnabled: boolean;
   isZoomEnabled: boolean;
   mainImageHeight: number | null;

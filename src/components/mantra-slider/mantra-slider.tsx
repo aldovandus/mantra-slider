@@ -64,7 +64,7 @@ interface Props {
   initialImageIndex?: number;
   data: any;
   isZoomEnabled?: boolean;
-  isControllersEnabled?: boolean;
+  hasControllers?: boolean;
   renderItem?(item: any, index: number): React.ReactNode;
   keyExtractor: (item: any) => string;
 }
@@ -76,16 +76,15 @@ const MantraSlider = ({
   isZoomEnabled = true,
   keyExtractor,
   data,
-  isControllersEnabled = true,
+  hasControllers = true,
 }: Props) => {
   const isSSR = useSSR();
 
   useLayoutEffect(() => {
     useStore.setState({
-      showScrollbarBottomIcon: isControllersEnabled,
-      showScrollbarTopIcon: isControllersEnabled,
       keyExtractor,
       data,
+      hasControllers,
       isZoomEnabled,
       currentImageIndex:
         initialImageIndex < React.Children.count(children)
